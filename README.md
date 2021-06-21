@@ -4,7 +4,9 @@ Demonstration how the type checker gets you beyond the AST. This demonstrations 
 
 ## Get started
 
-Run `yarn start` to execute `src/main.ts` and watch for changes 
+You can open this repository directly in [code sandbox](https://githubbox.com/georgiee/typescript-type-checker-beyond-ast) or clone this repo and follow the few steps locally.
+
+Run `yarn start` to execute `src/main.ts` and watch for changes
 so you can easily tinker around with the input file `my.component.ts`
 and watch the console output.
 
