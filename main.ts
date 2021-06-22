@@ -1,6 +1,7 @@
 import * as ts from "typescript";
+
 // relative to your root
-const files: string[] = ['src/my.component.ts']
+const files: string[] = ['file-with-types.ts']
 const program: ts.Program = ts.createProgram(files, {});
 const checker: ts.TypeChecker = program.getTypeChecker();
 
@@ -8,11 +9,11 @@ const myComponentSourceFile = program.getSourceFile(files[0])!;
 
 if(myComponentSourceFile) {
   ts.forEachChild(myComponentSourceFile, node => {
-    if (ts.isTypeAliasDeclaration(node) && node.name.escapedText === "Output") {
-      const outputType = checker.getTypeAtLocation(node.name);
-      processProperty(outputType, node);
+    if (ts.isTypeAliasDeclaration(node) && node.name.escapedText === "MainObjectType") {
+      const mainObjectType = checker.getTypeAtLocation(node.name);
+      processProperty(mainObjectType, node);
     }
-  });  
+  });
 }else {
   console.log('Given source file not found')
 }

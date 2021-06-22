@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev --respawn src/main.ts"
+    "start": "ts-node-dev --watch file-with-types.ts --respawn -- main.ts"
   },
   "dependencies": {
     "ts-node-dev": "^1.1.6",
